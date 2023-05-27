@@ -1,0 +1,107 @@
+<!--This serves as the declaration of the document type, telling the browser to treat the file as an HTML5 document.-->
+<!doctype html> 
+<!--This tag is the root element of the HTML document.-->
+<html> 
+    <!--The head element contains meta-information about the document, such as the title, character encoding, and links to stylesheets or scripts.-->
+    <head>
+        <!--This line sets the title of the web page, which is displayed in the browser's title bar or tab.-->
+        <title>Fetching Data Form NASA API</title>
+        <meta charset="UTF-8"> <!--Defined the character encoding for the HTML document is UTF-8.-->
+        <!--Imported the Materialize CSS framework. Materialize provides a set of pre-designed CSS classes that help create responsive and modern-looking web pages.-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!--Used to link an external CSS file to an HTML document.-->
+        <link rel="stylesheet" href="styles.css"> 
+    </head>
+    <!--The body element contains the content displayed on the web page.-->
+    <body>
+        <header class="row"> <!--The navigation bar.-->
+            <nav class="brown darken-2"> <!--Styling for color.-->
+                <div class="nav-wrapper">
+                    <div class="col s12"> <!--Divides the navigation bar into equal-width columns.-->
+                        <a href="#" class="brand-logo">Journey Into Space</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!--Creates a container for the main content and provides consistent padding and centering.-->
+        <div class="container"> 
+            <main> <!--Contains the primary content of the web page.-->
+                <section> <!--The section element is Used to group content that is thematically related.-->
+                    <!--This h1 tag displays a large heading with the text and centers it on the page.-->
+                    <h1 class="center-align">Discover Space Today!</h1>
+                    <div class="row">
+                        <!--The "s12" class makes the column span 12 units on small screens, while "m8" and "offset-m2" make it span 8 units and offset by 2 units on medium screens.-->
+                        <div class="col s12 m8 offset-m2">
+                            <!--This div has an "apod" id and a "card" class, which is reserved for displaying the Astronomy Picture of the Day (APOD).-->
+                            <div id="apod" class="card"> 
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <aside>
+                    <h2>Let's start</h2>
+                    <!--The form element creates a form with a single input field for selecting a date.-->
+                    <form class="col s12"> 
+                        <div class="row">
+                            <div class="input-field col s6"> <!--Creates a responsive grid column with an input field.-->
+                                <input type="text" id="start" class="datepicker"> <!--Allow users to select a date.-->
+                                <label for="start">Select Date</label>
+                            </div>
+                        </div>
+                    </form>
+                    <table id="afeedTable" class="striped hide">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Name</th>
+                                <th>Is Dangerous</th>
+                                <th>Magnitude</th>
+                                <th>Min</th>
+                                <th>Max</th>
+                                <th>Miss Distance</th>
+                                <th>Approach Date</th>
+                            </tr>
+                        </thead>
+                        <!--Displayed the fetched data from the NASA API.-->
+                        <tbody id="afeed">   
+                        </tbody>
+                    </table>
+                </aside>
+            </main>
+        </div>
+        <footer class="page-footer brown darken-2"> <!--Footer element-->
+            <div class="container">
+                <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Done by:</h5>
+                    <!--Applies a light grey color to the text.-->
+                    <p class="grey-text text-lighten-4"> 
+                        <!--This unordered list contains the names of the creators-->
+                        <ul> 
+                            <li> Razan Alhussainan </li>
+                            <li> Lujain Almogren </li>
+                            <li> Lama Alrashda </li>
+                            <li> Deema Altuwayjiri </li>
+                        </ul> 
+                    </p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Distributed System | CS427</h5>
+                    <ul>
+                        <li>372</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                © 2023
+                </div>
+            </div>
+        </footer>
+        <!--This script tag imports the Materialize JavaScript library, which provides functionality for the Materialize CSS framework.-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <!--This script tag links to an external JavaScript file (s.js), which should contain the code for handling user input, fetching data from the NASA API, and updating the table with fetched data.-->
+        <script src="NASA.js"></script>  
+    </body>
+</html>

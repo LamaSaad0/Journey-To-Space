@@ -1,0 +1,19 @@
+/* CSS styles for the web page. The styles include setting the background color, font family, 
+positioning, and colors for various elements on the page. */
+
+body{
+    background-color: rgb(227, 224, 219);
+    font-family:'Times New Roman', Times, serif;
+}
+#speed-container {
+    position:fixed;
+    right: 2em;
+    bottom: 0;
+}
+h1, h2, #start {
+    color: rgb(21, 20, 20);
+}
+table {
+    background-color: rgb(235, 232, 235);
+    margin-bottom: 2em;
+}
